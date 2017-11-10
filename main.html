@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="src/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="src/rouletteWheel.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var itemsToShow = parseInt(4);
+            console.log(itemsToShow);
+            var items = {
+                0: "あべっぴーのコルト",
+                1: "たまごぽーろ",
+                2: "うまい棒",
+                3: "あめ",
+            };
+            $('#canvas').rouletteWheel({
+                items: items,
+                selected: function (key, value) {
+                    alert("おめでとう！" + value + "をプレゼント！")
+                },
+                spinText: 'ここをクリック！',
+            });
+
+        });
+    </script>
+    <title>ルーレット</title>
+</head>
+<body>
+<canvas id="canvas" width="800" height="800"></canvas>
+</body>
+</html>
