@@ -7,18 +7,17 @@
     <script type="text/javascript" src="src/rouletteWheel.js"></script>
     <script type="text/javascript">
         $(function () {
-            var itemsToShow = parseInt(8);
-            console.log(itemsToShow);
             var items = {
                 0: "パジェロ",
                 1: "たまごボーロ",
                 2: "源氏パイ",
                 3: "あめ",
                 4: "ポッキー",
-                5: "ちょこ",
+                5: "チョコ",
                 6: "ハッピーターン",
                 7: "カントリーマーム"
             };
+            //var itemToShow = Object.keys(items).length;
             $('#canvas').rouletteWheel({
                 items: items,
                 selected: function (key, value) {
